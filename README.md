@@ -31,7 +31,7 @@ Uma API backend construída com Node.js e Express que integra a API do Google Ge
 
 ## Estrutura do Projeto
 ```
-recomendacao-cultural/
+recomendacoesApi/
 ├── src/
 │   ├── routes/
 │   │   └── recomendacao.js      # Rotas da API
@@ -40,9 +40,9 @@ recomendacao-cultural/
 │   ├── swagger.yaml             # Configuração do Swagger
 │   └── server.js                # Servidor principal
 ├── .env                         # Variáveis de ambiente
+├── .gitignore                   # Arquivo para ignorar arquivos no Git
 ├── package.json                 # Dependências e scripts
-├── package-lock.json            # Dependências
-├── .gitignore                   # 
+├── package-lock.json            # Versões travadas das dependências
 └── README.md                    # Este arquivo
 ```
 
