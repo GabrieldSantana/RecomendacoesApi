@@ -1,0 +1,36 @@
+openapi: 3.0.0
+info:
+  title: API de Recomendações Culturais
+  description: API para obter sugestões de filmes, séries ou livros usando Google Gemini
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000/api
+paths:
+  /recommend:
+    post:
+      summary: Obtém recomendações de filmes, séries ou livros
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                question:
+                  type: string
+                  description: Preferência do usuário (ex.: gênero, tema)
+                  example: "Quero um filme de ficção científica"
+      responses:
+        '200':
+          description: Recomendação gerada com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: string
+        '400':
+          description: Pergunta não fornecida
+        '500':
+          description: Erro ao consultar a API
